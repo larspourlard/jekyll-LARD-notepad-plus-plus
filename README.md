@@ -4,6 +4,15 @@ STATUS: a first "PoC", esp. coverage of keywords rather 1 as 2%
 
 ---
 
+[//]: <> (* Do not remove this line (it will not be displayed){:toc})
+
+<a href="#tldr">TL;DR</a>
+<a href="#installation">Installation</a>
+<a href="#purpose">Purpose</a>
+<a href="#principal-limitations">Principal Limitations</a>
+<a href="#shortcomings-by-implementation">Shortcomings by Implementation</a>
+<a href="#legal">Legal</a>
+
 
 # jekyll-LARD for Notepad++
 
