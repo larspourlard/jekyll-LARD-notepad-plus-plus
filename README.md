@@ -4,8 +4,7 @@ STATUS: a first "PoC", esp. coverage of keywords rather 1 as 2%
 
 ---
 
-[//]: <> (* Do not remove this line (it will not be displayed){:toc})
-
+[//]: # (* TOC{:toc})
 <a href="#tldr">TL;DR</a>
 <a href="#installation">Installation</a>
 <a href="#purpose">Purpose</a>
@@ -21,7 +20,7 @@ STATUS: a first "PoC", esp. coverage of keywords rather 1 as 2%
 
 ## TL;DR
 
-Not *HTML / Markdown **and** Jekyll / Liquid*, but at least *HTML / Markdown **or** Jekyll / Liquid*, i.e. highglight / code fold the Jekyll / Liquid parts of a file instead or alternative to HTML / Markdown parts.
+Not *HTML / Markdown **and** Jekyll / Liquid*, but at least *HTML / Markdown **or** Jekyll / Liquid*, i.e. highlight / code fold the Jekyll / Liquid parts of a file instead or alternative to HTML / Markdown parts.
 
 ![Example with HTML](demo/example.html.png "Example with HTML")
 ![Example with Markdown](demo/example.md.png "Example with Markdown")
