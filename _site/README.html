@@ -1,0 +1,51 @@
+<h1 id="jekyll-lard-for-notepad">jekyll-LARD for Notepad++</h1>
+
+<p><em>Highlight and fold Jekyll / Liquid constructs in Notepad++.</em></p>
+
+<h2 id="tldr">TL;DR</h2>
+
+<p>Not <em>HTML / Markdown <strong>and</strong> Jekyll / Liquid</em>, but at least <em>HTML / Markdown <strong>or</strong> Jekyll / Liquid</em>, i.e. highglight / code fold the Jekyll / Liquid parts of a file instead or alternative to HTML / Markdown parts.</p>
+
+<p><img src="demo/example.html.png" alt="Example with HTML" title="Example with HTML" />
+<img src="demo/example.md.png" alt="Example with Markdown" title="Example with Markdown" /></p>
+
+<h2 id="installation">Installation</h2>
+
+<ol>
+  <li>Download / save <a href="jekyll-lard.udl.xml">jekyll-lard.udl.xml</a> (can be deleted later; all other files here are just for documenation / testing)</li>
+  <li>Find your way to Notepad++’ “Language” menu and there something like “user defined”, depends on Notepad++ version and translation, <strong>OR</strong> try to find this little image in the midth of the toolbar: <img src="toolbar-icon-udl.png" alt="Notepad++ toolbar icon for UDLs" title="Notepad++ toolbar icon for UDLs" /> (and click it, of course)</li>
+  <li>Hopefully arrived at the “User Defined (Language)” dialog, click “Import …”</li>
+  <li>Choose “jekyll-lard.udl.xml”, maybe displayed only as “jekyll-lard.udl”</li>
+  <li>After “Import succesful”, restart Notepad++</li>
+  <li>In case you are very rigid in separating files for HTML / Markdown content and Jekyll / Liquid logic, you may save the latter with an “<em>.jek” extension so that Notepad++ directly associates jekyll-LARD, otherwise choose it per file in the “Language” menu (Notepad++ will then try to remember that *per file</em>)</li>
+</ol>
+
+<h2 id="purpose">Purpose</h2>
+
+<p>If you want to manage anything text-like with rich functionality in a nutshell, there’s no way around <a href="https://notepad-plus-plus.org/">Notepad++</a>, it’s even worth buying Windows machines solely for editing with it, otherwise get it via <a href="https://www.winehq.org/">Wine</a>.</p>
+
+<p>If you want to compose anything text-like from building blocks with rich functionality in a nutshell, there’s no way around <a href="https://jekyllrb.com/">Jekyll</a>.</p>
+
+<p>Unfortunately there’s no native higlighting or code folding in Notepad++ or any other known editor / IDE for the <a href="https://github.com/Shopify/liquid/wiki/Liquid-for-Designers">Liquid templating language</a> used by Jekyll (with <a href="https://jekyllrb.com/docs/liquid/">additions</a>). <strong>This gap is to be filled with the so called <a href="https://ivan-radic.github.io/udl-documentation/">“User Defined Language” (UDL)</a> right here.</strong></p>
+
+<blockquote>
+  <p>For (existing) highlighters / code folders for the Jekyll supported data types Markdown, YAML, JSON, CSV, TSV, and of course HTML see elsewhere.</p>
+</blockquote>
+
+<h2 id="principal-limitations">Principal Limitations</h2>
+
+<p>It is not possible to <em>extend</em> Notepad++’ built-in HTML highlighting / codefolding with UDLs due to technical reasons (cf. <a href="https://stackoverflow.com/questions/8575865">Stack Overflow</a>), and it is obviously not possible to <em>replace</em> built-in highlighting / code-folding by UDLs since UDLs simply have no option to define HTML tag structures (you may be able to encolor “tags” as keywords but will lose general functionalities with HTML files).</p>
+
+<h2 id="shortcomings-by-implementation">Shortcomings by Implementation</h2>
+
+<p>Foldable section markers like “if”, “for”, “comment” etc. will produce also and then totally wrong folding when used literally in text (see <a href="#Limitations">Limitations</a>: no real structure with UDLs). As you are here because you want to build from blocks, you may separate text (content) from build information (Jekyll / Liquid instructions) to work around this trap. Or write <code class="highlighter-rouge">&amp;nbsp;for</code> in literal contexts instead of ` for<code class="highlighter-rouge"> (</code>For<code class="highlighter-rouge"> with big </code>F` at the beginning of sentences etc. poses no problem). Or don’t write too often about things that are “for” and then only “if”. And of course you may run into strange scenarios if your Liquid template is rather complex (but that could be also a useful <em>general</em> hint, of course).</p>
+
+<h2 id="legal">Legal</h2>
+
+<p>Copyright (C) 2019  Lars Pourlard</p>
+
+<p>This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.</p>
+
+<p>This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more details.</p>
+
+<p>You should have received a copy of the GNU General Public License along with this program (file LICENSE).  If not, see https://www.gnu.org/licenses/.</p>

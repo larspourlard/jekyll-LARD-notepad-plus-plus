@@ -1,0 +1,22 @@
+---
+title: With HTML
+layout: demo
+---
+
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: "en" }}">
+  {%- include head.html -%}
+  <body>
+    {%- include header.html -%}
+    <h1>{{page.title}}</h1>
+    <p class="shortStatus">
+      Data on this page
+      {% assign thisMonth = "now" | date: '%B' %}
+      {% if thisMonth == site.data.reviews.checkedFor %}
+        is up to date
+      {% else %}
+        should be checked (last review was before {{ site.data.reviews.checkedFor }})
+      {% endif %}
+    </p>
+    {{content}}
+  </body>
