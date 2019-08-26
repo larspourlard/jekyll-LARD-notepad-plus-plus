@@ -10,17 +10,18 @@ STATUS: a first "PoC", esp. coverage of keywords rather 1 as 2%
 <a href="#purpose">Purpose</a>
 <a href="#principal-limitations">Principal Limitations</a>
 <a href="#shortcomings-by-implementation">Shortcomings by Implementation</a>
+<a href="#alternatives-at-hand">Alternatives at hand</a>
 <a href="#legal">Legal</a>
 
 
 # jekyll-LARD for Notepad++
 
-*Highlight and fold Jekyll / Liquid constructs in Notepad++.*
+*Fold and highlight Jekyll / Liquid constructs in Notepad++, emphasis on "fold"*
 
 
 ## TL;DR
 
-Not *HTML / Markdown **and** Jekyll / Liquid*, but at least *HTML / Markdown **or** Jekyll / Liquid*, i.e. highlight / code fold the Jekyll / Liquid parts of a file instead or alternative to HTML / Markdown parts.
+Not *HTML / Markdown **and** Jekyll / Liquid*, but at least *HTML / Markdown **or** Jekyll / Liquid*, i.e. code fold / highlight the Jekyll / Liquid parts of a file instead of / alternative to HTML / Markdown parts.
 
 ![Example with HTML](demo/example.html.png "Example with HTML")
 ![Example with Markdown](demo/example.md.png "Example with Markdown")
@@ -28,7 +29,7 @@ Not *HTML / Markdown **and** Jekyll / Liquid*, but at least *HTML / Markdown **o
 
 ## Installation
 
-1. Download / save [jekyll-lard.udl.xml](jekyll-lard.udl.xml) (can be deleted later; all other files here are just for documenation / testing)
+1. Download / save [jekyll-lard.udl.xml](https://raw.githubusercontent.com/larspourlard/jekyll-lard-notepad-plus-plus/master/jekyll-lard.udl.xml) (can be deleted later; all other files here are just for documenation / testing)
 2. Find your way to Notepad++' "Language" menu and there something like "user defined", depends on Notepad++ version and translation, **OR** try to find this little image in the midth of the toolbar: ![Notepad++ toolbar icon for UDLs](toolbar-icon-udl.png "Notepad++ toolbar icon for UDLs") (and click it, of course)
 3. Hopefully arrived at the "User Defined (Language)" dialog, click "Import ..."
 4. Choose "jekyll-lard.udl.xml", maybe displayed only as "jekyll-lard.udl"
@@ -54,7 +55,12 @@ It is not possible to *extend* Notepad++' built-in HTML highlighting / codefoldi
 
 ## Shortcomings by Implementation
 
-Foldable section markers like "if", "for", "comment" etc. will produce also and then totally wrong folding when used literally in text (see [Limitations](#Limitations): no real structure with UDLs). As you are here because you want to build from blocks, you may separate text (content) from build information (Jekyll / Liquid instructions) to work around this trap. Or write `&nbsp;for` in literal contexts instead of ` for` (`For` with big `F` at the beginning of sentences etc. poses no problem). Or don't write too often about things that are "for" and then only "if". And of course you may run into strange scenarios if your Liquid template is rather complex (but that could be also a useful *general* hint, of course).
+Foldable section markers like "if", "for", "comment" etc. will produce also and then totally wrong folding when used literally in text (see [Principal Limitations](#prinicipal-limitations): no real structure with UDLs). As you are here because you want to build from blocks, you may separate text (content) from build information (Jekyll / Liquid instructions) to work around this trap. Or write `&nbsp;for` in literal contexts instead of ` for` (`For` with big `F` at the beginning of sentences etc. poses no problem). Or don't write too often about things that are "for" and then only "if". And of course you may run into strange scenarios if your Liquid template is rather complex (but that could be also a useful *general* hint, of course).
+
+
+## Alternatives at hand
+
+Depending on your coding style and your needs you may mis-use Notepad++' built-in support for Python or Visual Basic ("vb" or "vbs" file extensions). Both can code fold HTML / Markdown *with* Liquid, but folds could be too far as well as too short since both are not based on pairs of start and end markers, but on block indent. If you can live with that, you may extend the Keywords for Python or Visual Basic with HTML and Liquid ones in `langs.model.xml` sections for `Language name="python"` or  `Language name="vb"`, google for details on that.
 
 
 ## Legal
